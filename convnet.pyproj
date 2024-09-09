@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1c41a70d-e125-4910-bdc6-302d9869db27}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>convnet.py</StartupFile>
+    <SearchPath>.</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <CommandLineArguments> -f ./storage2/tmp/ConvNet__2015.5.25 --test-only=1 --multiview-test=1 --logreg-name=logprob</CommandLineArguments>
+    <InterpreterPath />
+    <InterpreterArguments />
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <IsWindowsApplication>True</IsWindowsApplication>
+    <InterpreterId>Global|PythonCore|2.7</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Compile Include="convdata.py" />
+    <Compile Include="convnet.py" />
+    <Compile Include="data.py" />
+    <Compile Include="gpumodel.py" />
+    <Compile Include="layer.py" />
+    <Compile Include="options.py" />
+    <Compile Include="ordereddict.py" />
+    <Compile Include="shownet.py" />
+    <Compile Include="util.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="example-layers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="example-layers\layer-params-18pct.cfg" />
+    <Content Include="example-layers\layer-params-19pct.cfg" />
+    <Content Include="example-layers\layer-params-80sec.cfg" />
+    <Content Include="example-layers\layer-params-conv-local-11pct.cfg" />
+    <Content Include="example-layers\layer-params-conv-local-13pct.cfg" />
+    <Content Include="example-layers\layer-params-example.cfg" />
+    <Content Include="example-layers\layer-params-imagenet.cfg" />
+    <Content Include="example-layers\layer-params-imagenet2.cfg" />
+    <Content Include="example-layers\layer-params.gc.cfg" />
+    <Content Include="example-layers\path1-3layer.cfg" />
+    <Content Include="example-layers\path2-largest-half-4-and-5layer.cfg" />
+    <Content Include="example-layers\path2-largest-half-4layer-2.cfg" />
+    <Content Include="example-layers\path2-largest-half-5layer-2.cfg" />
+    <Content Include="example-layers\path2-largest-half-4-and-5layer-2012.cfg" />
+    <Content Include="example-layers\path2-largest-half-5layer-2012-2.cfg" />
+    <Content Include="example-layers\path2-largest-half-5layer-2012.cfg" />
+    <Content Include="example-layers\path2-largest-half-4-5layer.cfg" />
+    <Content Include="example-layers\path2-largest-half-5layer.cfg" />
+    <Content Include="example-layers\path2-largest-half-4layer.cfg" />
+    <Content Include="example-layers\path2-largest-half-3layer.cfg" />
+    <Content Include="example-layers\path2-largest-half.cfg" />
+    <Content Include="example-layers\path1-largest-half.cfg" />
+    <Content Include="example-layers\path1-largest.cfg" />
+    <Content Include="example-layers\path1-mid.cfg" />
+    <Content Include="example-layers\path1-large.cfg" />
+    <Content Include="example-layers\path1.cfg" />
+    <Content Include="example-layers\path2-large.cfg" />
+    <Content Include="example-layers\path3-large.cfg" />
+    <Content Include="example-layers\path3.cfg" />
+    <Content Include="example-layers\path4-large.cfg" />
+    <Content Include="example-layers\path4.cfg" />
+    <Content Include="example-layers\layers-conv-local-11pct.cfg" />
+    <Content Include="example-layers\layers-example-3layer.cfg" />
+    <Content Include="example-layers\layers-example.cfg" />
+    <Content Include="example-layers\layers-imagenet-10.cfg" />
+    <Content Include="example-layers\layers-imagenet-dropout.cfg" />
+    <Content Include="example-layers\layers-imagenet.cfg" />
+    <Content Include="example-layers\layers-imagenetCopy.cfg" />
+    <Content Include="example-layers\path2.cfg" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|2.7" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

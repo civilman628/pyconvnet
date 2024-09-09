@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="src\convnet.cu" />
+    <CudaCompile Include="src\cost.cu" />
+    <CudaCompile Include="src\cudaconv2\conv_util.cu" />
+    <CudaCompile Include="src\cudaconv2\filter_acts.cu" />
+    <CudaCompile Include="src\cudaconv2\img_acts.cu" />
+    <CudaCompile Include="src\cudaconv2\weight_acts.cu" />
+    <CudaCompile Include="src\data.cu" />
+    <CudaCompile Include="src\layer.cu" />
+    <CudaCompile Include="src\layer_kernels.cu" />
+    <CudaCompile Include="src\neuron.cu" />
+    <CudaCompile Include="src\nvmatrix\nvmatrix.cu" />
+    <CudaCompile Include="src\nvmatrix\nvmatrix_kernels.cu" />
+    <CudaCompile Include="src\Program.cu" />
+    <CudaCompile Include="src\pyconvnet.cu" />
+    <CudaCompile Include="src\util.cu" />
+    <CudaCompile Include="src\weights.cu" />
+    <CudaCompile Include="src\worker.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\common\matrix.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\convnet.cuh" />
+    <None Include="include\cost.cuh" />
+    <None Include="include\cudaconv2\conv_util.cuh" />
+    <None Include="include\cudaconv2\cudaconv2.cuh" />
+    <None Include="include\data.cuh" />
+    <None Include="include\layer.cuh" />
+    <None Include="include\layer_kernels.cuh" />
+    <None Include="include\neuron.cuh" />
+    <None Include="include\nvmatrix\nvmatrix.cuh" />
+    <None Include="include\nvmatrix\nvmatrix_kernels.cuh" />
+    <None Include="include\nvmatrix\nvmatrix_operators.cuh" />
+    <None Include="include\pyconvnet.cuh" />
+    <None Include="include\util.cuh" />
+    <None Include="include\weights.cuh" />
+    <None Include="include\worker.cuh" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\common\matrix.h" />
+    <ClInclude Include="include\common\matrix_funcs.h" />
+    <ClInclude Include="include\common\queue.h" />
+    <ClInclude Include="include\common\thread.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{82466F52-9BB1-4C09-85B9-73894B8E4B0E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>cubeKernel</RootNamespace>
+    <ProjectName>pyconvnet</ProjectName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 6.5.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(CUDA_INC_PATH);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(CUDA_INC_PATH);$(IncludePath)</IncludePath>
+    <LibraryPath>$(CUDA_LIB_PATH);$(LibraryPath)</LibraryPath>
+    <TargetExt>.pyd</TargetExt>
+    <OutDir>..</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(CUDA_INC_PATH);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(CUDA_INC_PATH);$(IncludePath)</IncludePath>
+    <LibraryPath>$(CUDA_LIB_PATH);$(LibraryPath)</LibraryPath>
+    <TargetExt>.pyd</TargetExt>
+    <OutDir>..</OutDir>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Anaconda\include;C:\Anaconda\libs;C:\Anaconda\Lib\site-packages\numpy\core\include\numpy;C:\ProgramData\NVIDIA Corporation\CUDA Samples\v6.5\common\inc;.\include;.\include\common;.\include\cudaconv2;.\include\nvmatrix;.\LIBS\include;.\LIBS\Pre-built.2;.\LIBS\pthreads.2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>C:\Anaconda\libs\python27.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.5\lib\x64\cublas.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.5\lib\x64\cudart.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.5\lib\x64\curand.lib;.\LIBS\libopenblas.lib;.\LIBS\pthreadVC2_x64.lib;.\LIBS\Pre-built.2\lib\pthreadVSE2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <CodeGeneration>compute_30,sm_30</CodeGeneration>
+    </CudaCompile>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;MS_NO_COREDLL;Py_NO_ENABLE_SHARED;NUMPY_INTERFACE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Anaconda\include;C:\Anaconda\libs;C:\Anaconda\Lib\site-packages\numpy\core\include\numpy;C:\ProgramData\NVIDIA Corporation\CUDA Samples\v6.5\common\inc;.\include;.\include\common;.\include\cudaconv2;.\include\nvmatrix;.\LIBS\include;.\LIBS\Pre-built.2;.\LIBS\pthreads.2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>C:\Anaconda\libs\python27.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.5\lib\x64\cublas.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.5\lib\x64\cudart.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\lib\x64\curand.lib;.\LIBS\libopenblas.lib;.\LIBS\pthreadVC2_x64.lib;.\LIBS\Pre-built.2\lib\pthreadVSE2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Anaconda\include;C:\Anaconda\libs;C:\Anaconda\Lib\site-packages\numpy\core\include\numpy;C:\ProgramData\NVIDIA Corporation\CUDA Samples\v6.5\common\inc;.\include;.\include\common;.\include\cudaconv2;.\include\nvmatrix;.\LIBS\include;.\LIBS\Pre-built.2;.\LIBS\pthreads.2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BrowseInformation>true</BrowseInformation>
+      <EnablePREfast>true</EnablePREfast>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>C:\Anaconda\libs\python27.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.5\lib\x64\cublas.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.5\lib\x64\cudart.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.5\lib\x64\curand.lib;.\LIBS\libopenblas.lib;.\LIBS\pthreadVC2_x64.lib;.\LIBS\Pre-built.2\lib\pthreadVSE2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <GPUDebugInfo>true</GPUDebugInfo>
+      <CodeGeneration>compute_30,sm_30</CodeGeneration>
+      <Optimization>InheritFromHost</Optimization>
+      <MaxRegCount>0</MaxRegCount>
+      <Runtime>InheritFromHost</Runtime>
+    </CudaCompile>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 6.5.targets" />
+  </ImportGroup>
+</Project>

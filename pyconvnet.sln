@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "convnet", "convnet.pyproj", "{1C41A70D-E125-4910-BDC6-302D9869DB27}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cubeKernel", "cubeKernel\cubeKernel.vcxproj", "{82466F52-9BB1-4C09-85B9-73894B8E4B0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C41A70D-E125-4910-BDC6-302D9869DB27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C41A70D-E125-4910-BDC6-302D9869DB27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C41A70D-E125-4910-BDC6-302D9869DB27}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1C41A70D-E125-4910-BDC6-302D9869DB27}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{1C41A70D-E125-4910-BDC6-302D9869DB27}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{1C41A70D-E125-4910-BDC6-302D9869DB27}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1C41A70D-E125-4910-BDC6-302D9869DB27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C41A70D-E125-4910-BDC6-302D9869DB27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C41A70D-E125-4910-BDC6-302D9869DB27}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1C41A70D-E125-4910-BDC6-302D9869DB27}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{1C41A70D-E125-4910-BDC6-302D9869DB27}.Release|Win32.ActiveCfg = Release|Any CPU
+		{1C41A70D-E125-4910-BDC6-302D9869DB27}.Release|x64.ActiveCfg = Release|Any CPU
+		{82466F52-9BB1-4C09-85B9-73894B8E4B0E}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{82466F52-9BB1-4C09-85B9-73894B8E4B0E}.Debug|Mixed Platforms.ActiveCfg = Debug|x64
+		{82466F52-9BB1-4C09-85B9-73894B8E4B0E}.Debug|Mixed Platforms.Build.0 = Debug|x64
+		{82466F52-9BB1-4C09-85B9-73894B8E4B0E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{82466F52-9BB1-4C09-85B9-73894B8E4B0E}.Debug|Win32.Build.0 = Debug|Win32
+		{82466F52-9BB1-4C09-85B9-73894B8E4B0E}.Debug|x64.ActiveCfg = Debug|x64
+		{82466F52-9BB1-4C09-85B9-73894B8E4B0E}.Debug|x64.Build.0 = Debug|x64
+		{82466F52-9BB1-4C09-85B9-73894B8E4B0E}.Release|Any CPU.ActiveCfg = Release|Win32
+		{82466F52-9BB1-4C09-85B9-73894B8E4B0E}.Release|Mixed Platforms.ActiveCfg = Release|x64
+		{82466F52-9BB1-4C09-85B9-73894B8E4B0E}.Release|Mixed Platforms.Build.0 = Release|x64
+		{82466F52-9BB1-4C09-85B9-73894B8E4B0E}.Release|Win32.ActiveCfg = Release|Win32
+		{82466F52-9BB1-4C09-85B9-73894B8E4B0E}.Release|Win32.Build.0 = Release|Win32
+		{82466F52-9BB1-4C09-85B9-73894B8E4B0E}.Release|x64.ActiveCfg = Release|x64
+		{82466F52-9BB1-4C09-85B9-73894B8E4B0E}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {82DB941F-BF1A-4242-B209-D1F8DDDA7081}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/civilmanxx
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = convnet.pyproj
+		SccLocalPath1 = .
+	EndGlobalSection
+EndGlobal
